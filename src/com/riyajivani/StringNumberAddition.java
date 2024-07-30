@@ -16,7 +16,7 @@ public class StringNumberAddition {
             return 0;
         }
         
-        numbers = numbers.replace("\n", ",");
+        numbers = numbers.replaceAll("[^0-9]+", ",");
         String[] nums = numbers.split(",");
         int addition = 0;
         
