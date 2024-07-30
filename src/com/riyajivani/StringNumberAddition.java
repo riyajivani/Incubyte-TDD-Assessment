@@ -19,6 +19,11 @@ public class StringNumberAddition {
         }
         
         numbers = numbers.replaceAll("[^0-9-]+", ",");
+        
+        if(numbers.replace(",", "").isEmpty()){
+            return 0;
+        }
+        
         String[] nums = numbers.split(",");
         int addition = 0;
         
@@ -36,7 +41,9 @@ public class StringNumberAddition {
         
         if(!negativenums.isEmpty()){
             throw new IllegalArgumentException("Negative numbers not allowed.");
-        }else{
+        }
+        else
+        {
         return addition;
         }
     }    

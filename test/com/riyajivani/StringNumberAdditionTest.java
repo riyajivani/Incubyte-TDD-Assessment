@@ -22,6 +22,9 @@ public class StringNumberAdditionTest {
         assertEquals(3, addition.addition("1,2"));
         assertEquals(8, addition.addition("3\n5"));
         assertEquals(13, addition.addition("2@6\\5"));
+        assertEquals(12, addition.addition("010,2,#"));
+        assertEquals(36, addition.addition("$(,6;0,12)        18"));
+        assertEquals(0, addition.addition("Shruti Bhalodia"));
     }
     
     @Test
