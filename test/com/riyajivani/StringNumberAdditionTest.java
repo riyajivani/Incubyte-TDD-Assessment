@@ -19,6 +19,7 @@ public class StringNumberAdditionTest {
         assertEquals(0,addition.addition(""));
         assertEquals(1,addition.addition("1"));
         assertEquals(3, addition.addition("1,2"));
+        assertEquals(8, addition.addition("3\n5"));
 
     }
     
