@@ -16,7 +16,13 @@ public class StringNumberAddition {
             return 0;
         }
         
-        return Integer.parseInt(numbers);
+        String[] nums = numbers.split(",");
+        int addition = 0;
+        
+        for(String num : nums){
+            addition += Integer.parseInt(num);
+        }
+        return addition;
     }
     
 }

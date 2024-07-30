@@ -18,6 +18,8 @@ public class StringNumberAdditionTest {
         StringNumberAddition addition = new StringNumberAddition();
         assertEquals(0,addition.addition(""));
         assertEquals(1,addition.addition("1"));
+        assertEquals(3, addition.addition("1,2"));
+
     }
     
 }
