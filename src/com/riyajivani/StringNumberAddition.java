@@ -36,10 +36,12 @@ public class StringNumberAddition {
         //adding non-negative numbers.
         for(String num : nums){
             if(!num.isEmpty()){
-                if(Integer.parseInt(num)<0){
+                int n = Integer.parseInt(num);
+                if(n<0){
                     negativenums.add(num);
                 }else{
-                    addition += Integer.parseInt(num);
+                    if(!(n>1000))
+                        addition += Integer.parseInt(num);
                 } 
             }
         }

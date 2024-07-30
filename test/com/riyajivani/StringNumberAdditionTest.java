@@ -32,7 +32,9 @@ public class StringNumberAdditionTest {
         
         assertEquals(36, addition.addition("$(,6;0,12)        18"));
         
-        assertEquals(0, addition.addition("Shruti Bhalodia"));
+        assertEquals(0, addition.addition("Hello Incubyte"));
+        
+        assertEquals(1002, addition.addition("2 + 1000"));
     }
     
     @Test
