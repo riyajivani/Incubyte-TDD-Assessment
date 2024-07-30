@@ -17,6 +17,7 @@ public class StringNumberAdditionTest {
     public void testAddition() {
         StringNumberAddition addition = new StringNumberAddition();
         assertEquals(0,addition.addition(""));
+        assertEquals(1,addition.addition("1"));
     }
     
 }
