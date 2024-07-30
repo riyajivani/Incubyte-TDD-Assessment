@@ -4,6 +4,8 @@
  */
 package com.riyajivani;
 
+import java.util.*;
+
 /**
  *
  * @author riyaj
@@ -16,14 +18,26 @@ public class StringNumberAddition {
             return 0;
         }
         
-        numbers = numbers.replaceAll("[^0-9]+", ",");
+        numbers = numbers.replaceAll("[^0-9-]+", ",");
         String[] nums = numbers.split(",");
         int addition = 0;
         
+        List<String> negativenums = new ArrayList<>();
+        
         for(String num : nums){
-            addition += Integer.parseInt(num);
+            if(!num.isEmpty()){
+                if(Integer.parseInt(num)<0){
+                    negativenums.add(num);
+                }else{
+                  addition += Integer.parseInt(num);
+                } 
+            }
         }
+        
+        if(!negativenums.isEmpty()){
+            throw new IllegalArgumentException("Negative numbers not allowed.");
+        }else{
         return addition;
-    }
-    
+        }
+    }    
 }

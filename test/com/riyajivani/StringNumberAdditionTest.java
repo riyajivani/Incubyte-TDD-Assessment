@@ -4,6 +4,7 @@
  */
 package com.riyajivani;
 
+import static org.hamcrest.CoreMatchers.is;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,5 +23,15 @@ public class StringNumberAdditionTest {
         assertEquals(8, addition.addition("3\n5"));
         assertEquals(13, addition.addition("2@6\\5"));
     }
+    
+    @Test
+    public void negativeNumTestAddition(){
+        StringNumberAddition addition = new StringNumberAddition();
+        try{
+            addition.addition("-7,3,6\\r");
+        }catch(IllegalArgumentException e){
+            assertThat(e.getMessage(),is("Negative numbers not allowed."));
+        }
+}
     
 }
